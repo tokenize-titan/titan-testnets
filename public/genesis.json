@@ -1,15 +1,15 @@
 {
-  "genesis_time": "2023-09-07T02:49:28.571840364Z",
-  "chain_id": "titan-testnet-1",
+  "genesis_time": "2024-01-24T00:00:00.000000Z",
+  "chain_id": "titan_18889-1",
   "initial_height": "1",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
-      "max_gas": "-1"
+      "max_gas": "40000000"
     },
     "evidence": {
-      "max_age_num_blocks": "100000",
-      "max_age_duration": "172800000000000",
+      "max_age_num_blocks": "518400",
+      "max_age_duration": "2592000000000000",
       "max_bytes": "1048576"
     },
     "validator": {
@@ -36,30 +36,23 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "titan1p9hcvfus3hf4ynzs67uzm3z3ehpqzahnu6fq4x",
+          "address": "titan10zv9znvudq2lfu7ms2g9ym7u29k2dn849ccqxk",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "titan1z7mw3dk293vxpazqhqhxmg7r50ylvc2p3mxepd",
+          "address": "titan1paytcaxedsd9q773kq675fgd7l0fhytp87ur63",
           "pub_key": null,
           "account_number": "1",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "titan1k2mxpszfrqd8ujlt35sy79gkl5v488h99v0sdc",
+          "address": "titan14tp2f9kty67q4p8frygmulhavcehjp63spww8q",
           "pub_key": null,
           "account_number": "2",
-          "sequence": "0"
-        },
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "titan1t3sav2t8s2qvvgff8m7y54z9h0kpd8hzpvqe2e",
-          "pub_key": null,
-          "account_number": "3",
           "sequence": "0"
         }
       ]
@@ -74,44 +67,73 @@
       },
       "balances": [
         {
-          "address": "titan1p9hcvfus3hf4ynzs67uzm3z3ehpqzahnu6fq4x",
+          "address": "titan1paytcaxedsd9q773kq675fgd7l0fhytp87ur63",
           "coins": [
             {
-              "denom": "utkx",
-              "amount": "20000000000000"
+              "denom": "atkx",
+              "amount": "2000000000000000000000"
             }
           ]
         },
         {
-          "address": "titan1z7mw3dk293vxpazqhqhxmg7r50ylvc2p3mxepd",
+          "address": "titan10zv9znvudq2lfu7ms2g9ym7u29k2dn849ccqxk",
           "coins": [
             {
-              "denom": "utkx",
-              "amount": "20000000000000"
+              "denom": "atkx",
+              "amount": "5000000000000000000000"
             }
           ]
         },
         {
-          "address": "titan1t3sav2t8s2qvvgff8m7y54z9h0kpd8hzpvqe2e",
+          "address": "titan14tp2f9kty67q4p8frygmulhavcehjp63spww8q",
           "coins": [
             {
-              "denom": "utkx",
-              "amount": "50000000000000"
-            }
-          ]
-        },
-        {
-          "address": "titan1k2mxpszfrqd8ujlt35sy79gkl5v488h99v0sdc",
-          "coins": [
-            {
-              "denom": "utkx",
-              "amount": "10000000000000"
+              "denom": "atkx",
+              "amount": "99993000000000000000000000"
             }
           ]
         }
       ],
       "supply": [],
-      "denom_metadata": [],
+      "denom_metadata": [
+        {
+          "description": "The native token of the Titan network.",
+          "denom_units": [
+            {
+              "denom": "atkx",
+              "exponent": 0,
+              "aliases": [
+                "attotkx"
+              ]
+            },
+            {
+              "denom": "utkx",
+              "exponent": 12,
+              "aliases": [
+                "microtkx"
+              ]
+            },
+            {
+              "denom": "mtkx",
+              "exponent": 15,
+              "aliases": [
+                "millitkx"
+              ]
+            },
+            {
+              "denom": "tkx",
+              "exponent": 18,
+              "aliases": []
+            }
+          ],
+          "base": "atkx",
+          "display": "tkx",
+          "name": "titan tkx",
+          "symbol": "TKX",
+          "uri": "",
+          "uri_hash": ""
+        }
+      ],
       "send_enabled": []
     },
     "capability": {
@@ -121,13 +143,13 @@
     "consensus": null,
     "crisis": {
       "constant_fee": {
-        "denom": "utkx",
-        "amount": "1000000000"
+        "denom": "atkx",
+        "amount": "10000000000000000000"
       }
     },
     "distribution": {
       "params": {
-        "community_tax": "0.100000000000000000",
+        "community_tax": "0.020000000000000000",
         "base_proposer_reward": "0.000000000000000000",
         "bonus_proposer_reward": "0.000000000000000000",
         "withdraw_addr_enabled": true
@@ -147,8 +169,51 @@
     "evidence": {
       "evidence": []
     },
+    "evm": {
+      "accounts": [],
+      "params": {
+        "evm_denom": "atkx",
+        "enable_create": true,
+        "enable_call": true,
+        "extra_eips": [],
+        "chain_config": {
+          "homestead_block": "0",
+          "dao_fork_block": "0",
+          "dao_fork_support": true,
+          "eip150_block": "0",
+          "eip150_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "eip155_block": "0",
+          "eip158_block": "0",
+          "byzantium_block": "0",
+          "constantinople_block": "0",
+          "petersburg_block": "0",
+          "istanbul_block": "0",
+          "muir_glacier_block": "0",
+          "berlin_block": "0",
+          "london_block": "0",
+          "arrow_glacier_block": "0",
+          "gray_glacier_block": "0",
+          "merge_netsplit_block": "0",
+          "shanghai_block": "0",
+          "cancun_block": "0"
+        },
+        "allow_unprotected_txs": false
+      }
+    },
     "feegrant": {
       "allowances": []
+    },
+    "feemarket": {
+      "params": {
+        "no_base_fee": false,
+        "base_fee_change_denominator": 8,
+        "elasticity_multiplier": 2,
+        "enable_height": "0",
+        "base_fee": "1000000000",
+        "min_gas_price": "0.000000000000000000",
+        "min_gas_multiplier": "0.500000000000000000"
+      },
+      "block_gas": "0"
     },
     "genutil": {
       "gen_txs": [
@@ -158,7 +223,7 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "valnode01",
+                  "moniker": "Ymir Fritz",
                   "identity": "",
                   "website": "",
                   "security_contact": "",
@@ -169,20 +234,20 @@
                   "max_rate": "0.200000000000000000",
                   "max_change_rate": "0.010000000000000000"
                 },
-                "min_self_delegation": "1",
-                "delegator_address": "titan1p9hcvfus3hf4ynzs67uzm3z3ehpqzahnu6fq4x",
-                "validator_address": "titanvaloper1p9hcvfus3hf4ynzs67uzm3z3ehpqzahnzwv9dh",
+                "min_self_delegation": "2048000000000000000000",
+                "delegator_address": "titan10zv9znvudq2lfu7ms2g9ym7u29k2dn849ccqxk",
+                "validator_address": "titanvaloper10zv9znvudq2lfu7ms2g9ym7u29k2dn84mva978",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "7dE1U1KDeFRsEfUWuIfP6Wh81LQ0s/rNdkM3x1LqfGE="
+                  "key": "pjdqbNxMeNpOCK3mQ5mCpTbD0AcWDHVOUIzI5nKExaA="
                 },
                 "value": {
-                  "denom": "utkx",
-                  "amount": "20000000000000"
+                  "denom": "atkx",
+                  "amount": "2048000000000000000000"
                 }
               }
             ],
-            "memo": "931c05dc2d02d36e68048b5fd5d7e5f4934a35f3@10.15.7.219:26656",
+            "memo": "80fbc7606d7d8799825b7b44a0b4d53342d92211@192.168.0.25:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -191,8 +256,8 @@
             "signer_infos": [
               {
                 "public_key": {
-                  "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "AmJrG6lYtSqOPI10gwi35Q3vFYa/OkEn7wb4z8RIMi1U"
+                  "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+                  "key": "AyVako48/o5QTGK3LFb9NGrq75XXJTYNs0q29iBAT8Mi"
                 },
                 "mode_info": {
                   "single": {
@@ -211,69 +276,7 @@
             "tip": null
           },
           "signatures": [
-            "fLr6gdaT6hhuiGcup80WmokeACbqaSy7P72A5gbAhnYjtD5pk6wFBsD46My9p8nVSAOzjx5PfGsIEwSowkMQZg=="
-          ]
-        },
-        {
-          "body": {
-            "messages": [
-              {
-                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
-                "description": {
-                  "moniker": "valnode02",
-                  "identity": "",
-                  "website": "",
-                  "security_contact": "",
-                  "details": ""
-                },
-                "commission": {
-                  "rate": "0.100000000000000000",
-                  "max_rate": "0.200000000000000000",
-                  "max_change_rate": "0.010000000000000000"
-                },
-                "min_self_delegation": "1",
-                "delegator_address": "titan1z7mw3dk293vxpazqhqhxmg7r50ylvc2p3mxepd",
-                "validator_address": "titanvaloper1z7mw3dk293vxpazqhqhxmg7r50ylvc2p00rueu",
-                "pubkey": {
-                  "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "FBbB/9bE7byH48s3JQWpNZztxM84IIfzJhnUnDbfL1U="
-                },
-                "value": {
-                  "denom": "utkx",
-                  "amount": "20000000000000"
-                }
-              }
-            ],
-            "memo": "29010efc8efba05693fb241ac282956ed436616c@10.15.15.180:26656",
-            "timeout_height": "0",
-            "extension_options": [],
-            "non_critical_extension_options": []
-          },
-          "auth_info": {
-            "signer_infos": [
-              {
-                "public_key": {
-                  "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "AsWpMMNViXgy7xCO/bJGnVOUxHfYV1iNGun1jUuJuTEe"
-                },
-                "mode_info": {
-                  "single": {
-                    "mode": "SIGN_MODE_DIRECT"
-                  }
-                },
-                "sequence": "0"
-              }
-            ],
-            "fee": {
-              "amount": [],
-              "gas_limit": "200000",
-              "payer": "",
-              "granter": ""
-            },
-            "tip": null
-          },
-          "signatures": [
-            "JLq7uuoRM1WmRRuPi5liYDHTOiFSAEPZwXWL8gmoasJoQJ/XimRZWh+gHlWsiBWqt3Yt1xv2W43pVkQwKGAvkQ=="
+            "CViM6HynM7NB9M2pHx/ul60XmOBiLMyF/Zms9ZW6dC5JUecvMd9UXtveB2HL+SGimrxuEhUOPrZkeGo6AG87VQE="
           ]
         }
       ]
@@ -289,19 +292,19 @@
       "params": {
         "min_deposit": [
           {
-            "denom": "utkx",
-            "amount": "100000000"
+            "denom": "atkx",
+            "amount": "250000000000000000000"
           }
         ],
-        "max_deposit_period": "1209600s",
-        "voting_period": "1209600s",
+        "max_deposit_period": "604800s",
+        "voting_period": "604800s",
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto_threshold": "0.334000000000000000",
         "min_initial_deposit_ratio": "0.000000000000000000",
         "burn_vote_quorum": false,
         "burn_proposal_deposit_prevote": false,
-        "burn_vote_veto": false
+        "burn_vote_veto": true
       }
     },
     "group": {
@@ -322,7 +325,8 @@
         "params": {
           "allowed_clients": [
             "06-solomachine",
-            "07-tendermint"
+            "07-tendermint",
+            "09-localhost"
           ]
         },
         "create_localhost": false,
@@ -368,11 +372,15 @@
         }
       }
     },
+    "nft": {
+      "classes": [],
+      "entries": []
+    },
     "params": null,
     "slashing": {
       "params": {
         "signed_blocks_window": "10000",
-        "min_signed_per_window": "0.500000000000000000",
+        "min_signed_per_window": "0.050000000000000000",
         "downtime_jail_duration": "600s",
         "slash_fraction_double_sign": "0.050000000000000000",
         "slash_fraction_downtime": "0.000100000000000000"
@@ -386,8 +394,9 @@
         "max_validators": 188,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "utkx",
-        "min_commission_rate": "0.000000000000000000"
+        "bond_denom": "atkx",
+        "min_commission_rate": "0.000000000000000000",
+        "global_min_self_delegation": "2048000000000000000000"
       },
       "last_total_power": "0",
       "last_validator_powers": [],
@@ -397,17 +406,34 @@
       "redelegations": [],
       "exported": false
     },
-    "titan": {
-      "params": {}
-    },
     "transfer": {
       "port_id": "transfer",
       "denom_traces": [],
       "params": {
         "send_enabled": true,
         "receive_enabled": true
-      }
+      },
+      "total_escrowed": []
     },
-    "upgrade": {}
+    "upgrade": {},
+    "validatorreward": {
+      "params": {
+        "rate": "0.060000000000000000",
+        "authority": "titan14tp2f9kty67q4p8frygmulhavcehjp63spww8q"
+      },
+      "last_distribute_time": null
+    },
+    "wasm": {
+      "params": {
+        "code_upload_access": {
+          "permission": "Everybody",
+          "addresses": []
+        },
+        "instantiate_default_permission": "Everybody"
+      },
+      "codes": [],
+      "contracts": [],
+      "sequences": []
+    }
   }
 }
